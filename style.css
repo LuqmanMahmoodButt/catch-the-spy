@@ -1,0 +1,17 @@
+.game {
+	width: 697px;
+	height: 610px;
+	display: flex;
+	flex-wrap: wrap;
+    border: solid black 5px;
+}
+
+.hole {
+	height: 200px;
+	width: 230px;
+	border: solid black 1px;
+}
+
+.nose {
+	background-color: red;
+}
