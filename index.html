@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+
+</style>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whack The Nose</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch The Spy</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
 
 </head>
-<body>
+
+  <body>
+    <div></div>
     <h2 class="score">Your Score: </h2>
+    
+    <h2 class="gametime"></h2>
+    <button class="gamestart"> Start Game</button>
+    <button class="easybutton"> Easy</button>
+    <button class="mediumbutton"> Medium </button>
+    <button class="hardbutton"> Hard </button>
+    <div class="game-container">
+      <div class="end-game-message"></div>
+      <div class="game">
+        <div class="hole" id="1"></div>
+        <div class="hole" id="2"></div>
+        <div class="hole" id="3"></div>
+        <div class="hole" id="4"></div>
+        <div class="hole" id="5"></div>
+        <div class="hole" id="6"></div>
+        <div class="hole" id="7"></div>
+        <div class="hole" id="8"></div>
+        <div class="hole" id="9"></div>
+      </div>
+      <!-- <div class="cursor">
+        <img src="./assests/net.png"
+      </div> -->
+    </div>
+  </body>
 
-  <h2 class="gametime"></h2>
 
-  <div class="game">
-    <div class="hole" id="1"></div>
-    <div class="hole" id="2"></div>
-    <div class="hole" id="3"></div>
-    <div class="hole" id="4"></div>
-    <div class="hole" id="5"></div>
-    <div class="hole" id="6"></div>
-    <div class="hole" id="7"></div>
-    <div class="hole" id="8"></div>
-    <div class="hole" id="9"></div>
-  </div>
-
-</body>
 </html>

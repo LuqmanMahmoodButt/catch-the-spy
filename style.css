@@ -1,17 +1,78 @@
+* {
+	/* cursor: none; */
+}
+
+
 .game {
 	width: 697px;
 	height: 610px;
 	display: flex;
 	flex-wrap: wrap;
     border: solid black 5px;
+	background-color: cadetblue;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: row;
+	align-content: space-between;
+	justify-content: space-around;
+	cursor: url(assests/net.png);
+	size: 30px;
+	
 }
 
+/* .cursor img {
+	position: absolute;
+	height: 125px;
+	transform: translate(-50px, -40px);
+	pointer-events: none;
+	
+}
+@keyframes hit {
+	from {
+		transform: rotate(300deg);
+	}
+	to {
+		transform: rotate(220deg);
+	}
+} */
+
+.spy {
+	background-image: url('../assests/pngwing.com.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 .hole {
-	height: 200px;
-	width: 230px;
+	color: black;
+	height: 190px;
+	width: 220px;
 	border: solid black 1px;
+	border-radius: 100%;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
 }
 
-.nose {
-	background-color: red;
+.gamestart {
+	height: 40px;
+	width: 80px;
+}
+.easybutton {
+	height: 40px;
+	width: 80px;
+}
+.mediumbutton {
+	height: 40px;
+	width: 80px;
+}
+.hardbutton {
+	height: 40px;
+	width: 80px;
+}
+.end-game-message {
+	border: solid black 5px;
+	height: 50px;
+	width: 300px;
 }
