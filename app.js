@@ -8,6 +8,8 @@ const medium = document.querySelector('.mediumbutton')
 const hard = document.querySelector('.hardbutton')
 const endResult = document.querySelector('.end-game-message')
 const cursor = document.querySelector(".cursor img")
+const audio = document.querySelector('.background-audio')
+
 
 window.addEventListener("mousemove", (e) => {
     cursor.style.top = e.pageY + "px"
@@ -26,25 +28,34 @@ window.addEventListener("click", () => {
 let easySpeed = false
 let mediumSpeed = false
 let hardSpeed = false
-let gameSpeed = 1000 
+let gameSpeed = 1000
 let result = 0
 let hitSpy
 let gameTime = 60
 let timer = null
 time.textContent = `Game Timer: ${gameTime}`
 
-easy.addEventListener('click', () =>{
+easy.addEventListener('click', () => {
     gameSpeed = 1000
+    hardSpeed = false
+    mediumSpeed = false
     easySpeed = true
+    console.log("working ", easySpeed, mediumSpeed);
 
 })
 
-medium.addEventListener('click', () =>{
+medium.addEventListener('click', () => {
     gameSpeed = 500
+    mediumSpeed = true
+    easySpeed = false
+    hardSpeed = false
+    console.log("working ", easySpeed, mediumSpeed);
+
 })
 
-hard.addEventListener('click', () =>{
+hard.addEventListener('click', () => {
     gameSpeed = 300
+    hardSpeed = true
 })
 
 const randomHole = () => {
@@ -74,24 +85,28 @@ holes.forEach(hole => {
 const countDown = () => {
     gameTime--
     time.textContent = `Game Timer: ${gameTime}`
-    
+
     if (gameTime === 0) {
-        // if (easySpeed && result >= 50) {
-        //     endResult.textContent = 'you are winner winner chicken dinner'
-        // } else {
-        //     endResult.textContent = 'you are loser'
-        // }
-        // if (mediumSpeed && result >= 10) {
-        //     endResult.textContent = 'you are winner winner chicken dinner'
-        // } else {
-        //     endResult.textContent = 'you are loser'
-        // }
-        // if (hardSpeed && result >= 10) {
-        //     endResult.textContent = 'you are winner winner chicken dinner'
-        // } else {
-        //     endResult.textContent = 'you are loser'
-        // }
-        // endResult.textContent = `Your High-score Is:${result}`
+        console.log(result, easySpeed, mediumSpeed);
+        if (easySpeed === true) {
+            if (result >= 5) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            } 
+        } else if ( mediumSpeed === true) {
+            if (result >= 5) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            }
+        } else if ( hardSpeed === true) {
+            if (result >= 5) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = "LOSER!"
+            }
+        }
         // this code resets the game
         clearInterval(timer)
         clearInterval(spyMovement)
@@ -107,17 +122,18 @@ const moveSpy = () => {
 }
 
 const startGameButton = () => {
-    if (timer) return; 
+    if (timer) return;
 
-    result = 0; 
+    result = 0;
     score.textContent = `Your Score: ${result}`;
 
-    gameTime = 10; 
+    gameTime = 20;
     time.textContent = `Game Timer: ${gameTime}`;
     timer = setInterval(countDown, 1000);
 
     moveSpy();
     countDown()
+    audio.play()
 }
 
 

@@ -3,6 +3,7 @@
 <style>
 
 </style>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,35 +11,58 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
 
+  <audio class="background-audio" src="sounds/jamesbondsong.mp3">
+
+  </audio>
 </head>
 
-  <body>
-    <div></div>
-    <h2 class="score">Your Score: </h2>
-    
-    <h2 class="gametime"></h2>
-    <button class="gamestart"> Start Game</button>
-    <button class="easybutton"> Easy</button>
-    <button class="mediumbutton"> Medium </button>
-    <button class="hardbutton"> Hard </button>
-    <div class="game-container">
-      <div class="end-game-message"></div>
-      <div class="game">
-        <div class="hole" id="1"></div>
-        <div class="hole" id="2"></div>
-        <div class="hole" id="3"></div>
-        <div class="hole" id="4"></div>
-        <div class="hole" id="5"></div>
-        <div class="hole" id="6"></div>
-        <div class="hole" id="7"></div>
-        <div class="hole" id="8"></div>
-        <div class="hole" id="9"></div>
+<body>
+  <h1 class="game-title">CATCH THE SPY</h1>
+  <div class="main-container">
+    <div class="message-container">
+      <div class="rules">
+        <h3>WE NEED YOUR HELP!!<br>
+          We have checked our camera's and found a spy within our organisation we need your help to catch the spy before the timer runs out.
+        </h3>
+        
+        <h1>RULES</h1>
+        <h2>SELECT A DIFFICULTY<br>
+          <h2>CLICK START GAME<br>
+            <h3>YOU HAVE 3 WAYS TO WIN</h3>
+            <li class="easy-color">EASY MODE -------> CATCH 50 SPIES</li><br>
+            <li class="med-color">MED MODE -------> CATCH 25 SPIES</li><br>
+            <li class="hard-color">HARD MODE -------> CATCH 10 SPIES</li><br>
+          </h3>
+          <div class="end-game-message"></div>
+          <div class="button-container">
+            <button class="gamestart"> START GAME</button>
+            <button class="easybutton"> EASY</button>
+            <button class="mediumbutton"> MEDIUM </button>
+            <button class="hardbutton"> HARD </button>
+          </div>
+        </div>
       </div>
-      <!-- <div class="cursor">
-        <img src="./assests/net.png"
-      </div> -->
+      <div class="game">
+        <div class="score-timer">
+          <h2 class="score">Your Score: </h2>
+          <h2 class="gametime"></h2>
+        </div>
+      <div class="hole" id="1"></div>
+      <div class="hole" id="2"></div>
+      <div class="hole" id="3"></div>
+      <div class="hole" id="4"></div>
+      <div class="hole" id="5"></div>
+      <div class="hole" id="6"></div>
+      <div class="hole" id="7"></div>
+      <div class="hole" id="8"></div>
+      <div class="hole" id="9"></div>
     </div>
-  </body>
+  </div>
+  <div class="cursor">
+    <img src="./assests/net.png" alt="net">
+  </div>
+
+</body>
 
 
 </html>

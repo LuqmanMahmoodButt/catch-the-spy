@@ -1,27 +1,111 @@
 * {
-	/* cursor: none; */
+	cursor: none;
+	
+}
+html {
+	/* background-image: url('./assests/background-8.jpg'); */
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #161925
+
 }
 
+h1 {
+	color: red;
+}
+h2 {
+	color: blue;
+}
+h3 {
+	color: aqua;
+}
 
+.easy-color {
+	color: green
+}
+.med-color {
+	color: orange;
+}
+.hard-color {
+	color: #ff0000;
+}
+.game-title {
+	color: greenyellow;
+	display: flex;
+	justify-content: flex-end;
+	width: 44vw;
+	font-size: 45px;
+}
+.end-game-message {
+	color: white;
+	
+}
+.rules {
+	color: black;
+	border: solid black 5px;
+	width: 20vw;
+	background-color: rgb(0, 0, 0);
+	border-radius: 10px;
+	box-shadow:0px -1px 12px 3px;
+	
+
+}
+.score {
+	color: white;
+	
+}
+.gametime {
+	color: white;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.score-timer {
+	width: 800px;
+	display: flex;
+	flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-around;
+}
+
+.message-container {
+	display: flex;
+	flex-direction: column-reverse;
+	
+	
+}
+.main-container {
+	padding: 5px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-evenly;
+	align-items: center;
+	
+	
+}
 .game {
 	width: 697px;
 	height: 610px;
-	display: flex;
 	flex-wrap: wrap;
-    border: solid black 5px;
-	background-color: cadetblue;
+    /* border: solid black 5px; */
+	/* background-color: cadetblue; */
 	display: flex;
 	align-items: center;
 	text-align: center;
 	flex-direction: row;
-	align-content: space-between;
+	align-content: center;
 	justify-content: space-around;
-	cursor: url(assests/net.png);
-	size: 30px;
-	
 }
 
-/* .cursor img {
+
+
+
+.cursor img {
 	position: absolute;
 	height: 125px;
 	transform: translate(-50px, -40px);
@@ -35,44 +119,128 @@
 	to {
 		transform: rotate(220deg);
 	}
-} */
+}
 
 .spy {
-	background-image: url('../assests/pngwing.com.png');
+	background-image: url('../assests/english-spy.png');
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-size: 200px;
 }
 .hole {
-	color: black;
 	height: 190px;
 	width: 220px;
 	border: solid black 1px;
 	border-radius: 100%;
-	background-color: black;
+	background-color: #292F36;
 	display: flex;
 	align-items: center;
 	text-align: center;
-
+	box-shadow:inset 0px -1px 12px 3px
+	
+}
+.button-container {
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
 }
 
 .gamestart {
-	height: 40px;
-	width: 80px;
+	height: 60px;
+    width: 200px;
+    font-weight: bold;
+	border-radius: 20px;
 }
+.gamestart:focus {
+	outline-color: transparent;
+	background-color: blue;
+	outline-style:solid;
+	box-shadow: 0 0 0 4px blue;
+	transition: 0.7s;
+	color: aliceblue;
+}
+
+.gamestart:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+
+
+.easybutton:focus {
+    outline-color: transparent;
+	background-color: green;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px green;
+    transition: 0.7s;
+	color: white;
+
+}
+.easybutton:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+.mediumbutton:focus {
+    outline-color: transparent;
+	background-color: orange;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px orange;
+    transition: 0.7s;
+	color: white;
+
+}
+.mediumbutton:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+.hardbutton:focus {
+    outline-color: transparent;
+	background-color: red;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px red;
+    transition: 0.7s;
+	color: white;
+
+}
+.hardbutton:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
 .easybutton {
-	height: 40px;
-	width: 80px;
+	color: green;
+	font-weight: bold;
+	height: 60px;
+    width: 150px;
+    font-weight: bold;
+	border-radius: 20px;
 }
+
 .mediumbutton {
-	height: 40px;
-	width: 80px;
+	height: 60px;
+    width: 150px;
+    font-weight: bold;
+	border-radius: 20px;
+	color: orange;
+	font-weight: bold;
 }
 .hardbutton {
-	height: 40px;
-	width: 80px;
+	height: 60px;
+    width: 150px;
+    font-weight: bold;
+	border-radius: 20px;
+	color: red;
+	font-weight: bold;
 }
 .end-game-message {
-	border: solid black 5px;
-	height: 50px;
-	width: 300px;
+	
+    height: 50px;
+    width: 20vw;
+    font-size: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
