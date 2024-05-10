@@ -129,6 +129,7 @@ easy.addEventListener('click', () => {
 ```
 ### HTML Structure
 - The game layout and elements are structured using HTML, including buttons, score display, timer, and holes where spies can hide.
+
 ```html
 <body>
     <div class="end-game-message"></div>
@@ -157,11 +158,11 @@ easy.addEventListener('click', () => {
         <img src="./assests/net.png" alt="net">
     </div>
 </body>
-
 ```
 
 ### CSS Styling
 - CSS styles are applied to enhance the appearance of game elements, including fonts, colors, and layouts.
+
 ```css
 .game-title {
 	color: greenyellow;
