@@ -166,19 +166,19 @@ h3 {
 	background-image: url('./assests/english-spy.png');
 	background-repeat: no-repeat;
 	background-size: 205px;
-	
+
 }
 
 .hole {
 	height: 190px;
-    width: 220px;
-    border: solid black 1px;
-    border-radius: 100%;
-    background-color: #292F36;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    box-shadow: inset 0px -1px 20px 20px;
+	width: 220px;
+	border: solid black 1px;
+	border-radius: 100%;
+	background-color: #292F36;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	box-shadow: inset 0px -1px 20px 20px;
 }
 
 .button-container {
