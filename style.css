@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Oswald:wght@200..700&family=Pacifico&display=swap');
 
 * {
 	cursor: none;
@@ -17,16 +19,31 @@ h2 {
 }
 h3 {
 	color: aqua;
+	font-family: "Alatsi", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
 }
 
 .easy-color {
-	color: green
+	color: green;
+	font-family: "Oswald", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	font-weight: 400;
 }
 .med-color {
 	color: orange;
+	font-family: "Oswald", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	font-weight: 400;
 }
 .hard-color {
 	color: #ff0000;
+	font-family: "Oswald", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	font-weight: 400;
 }
 .game-title {
 	color: greenyellow;
