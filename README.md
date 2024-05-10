@@ -4,7 +4,7 @@ Welcome to Catch The Spy game! This game challenges you to catch a certian amoun
 
 ## Demo
 
-[Link to the live demo](#)
+[CLICK TO PLAY GAME](https://luqmanmahmoodbutt.github.io/catch-the-spy/)
 
 ![Game](/assests/gamepic.png)
 
