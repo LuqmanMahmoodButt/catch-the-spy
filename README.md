@@ -6,7 +6,7 @@ Welcome to Catch The Spy game! This game challenges you to catch a certian amoun
 
 [Link to the live demo](#)
 
-![Game](/assests/game-picture.png)
+![Game](/assests/gamepic.png)
 
 ## How to Play
 
@@ -41,9 +41,11 @@ Welcome to Catch The Spy game! This game challenges you to catch a certian amoun
 - [Music for the game](https://www.youtube.com/watch?v=U9FzgsF2T-s&ab_channel=TheAmericanGazette)
 
 - [Font for Game](https://fonts.google.com/)
+## Wire Frame
+
+![Game](/assests/wireframe.png)
 
 ## Game Code Details
-
 
 ### JavaScript Logic
 - JavaScript code handles game logic, such as spy movement, user interactions, score tracking, and timer management.
