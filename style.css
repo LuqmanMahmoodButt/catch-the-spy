@@ -1,102 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Oswald:wght@200..700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Oswald:wght@200..700&family=Pacifico&family=Poetsen+One&display=swap');
 
 * {
 	cursor: none;
-	
+
 }
+
 html {
 	background-color: #161925
-
 }
 
 h1 {
 	color: red;
 }
+
 h2 {
 	color: blue;
 }
+
 h3 {
 	color: aqua;
 	font-family: "Alatsi", sans-serif;
-  	font-weight: 400;
-  	font-style: normal;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .easy-color {
 	color: green;
 	font-family: "Oswald", sans-serif;
-  	font-optical-sizing: auto;
-  	font-style: normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 	font-weight: 400;
 }
+
 .med-color {
 	color: orange;
 	font-family: "Oswald", sans-serif;
-  	font-optical-sizing: auto;
-  	font-style: normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 	font-weight: 400;
 }
+
 .hard-color {
 	color: #ff0000;
 	font-family: "Oswald", sans-serif;
-  	font-optical-sizing: auto;
-  	font-style: normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 	font-weight: 400;
 }
+
 .game-title {
 	color: greenyellow;
 	display: flex;
 	justify-content: flex-end;
 	width: 44vw;
 	font-size: 45px;
-	font-family: "Pacifico", cursive;
+	font-family: "Poetsen One", sans-serif;
 	font-weight: 400;
 	font-style: normal;
+
 }
+
 .end-game-message {
 	color: white;
-	
+
 }
+
 .rules {
 	color: black;
 	border: solid black 5px;
 	width: 20vw;
 	background-color: rgb(0, 0, 0);
 	border-radius: 10px;
-	box-shadow:0px -1px 12px 3px;
-	
+	box-shadow: 0px -1px 12px 3px;
+
 
 }
+
 .score {
-	color: white;
-	
+	color: red;
+	font-family: "Poetsen One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
 }
+
 .gametime {
-	color: white;
+	color: red;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-evenly;
 	align-items: center;
+	font-family: "Poetsen One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .score-timer {
 	width: 800px;
 	display: flex;
 	flex-direction: column-reverse;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: stretch;
-    align-content: space-around;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: space-around;
+	font-family: "Alatsi", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .message-container {
 	display: flex;
 	flex-direction: column-reverse;
-	
-	
+
+
 }
+
 .main-container {
 	padding: 5px;
 	margin-bottom: 10px;
@@ -104,9 +125,10 @@ h3 {
 	flex-direction: row-reverse;
 	justify-content: space-evenly;
 	align-items: center;
-	
-	
+
+
 }
+
 .game {
 	width: 697px;
 	height: 610px;
@@ -127,12 +149,14 @@ h3 {
 	height: 125px;
 	transform: translate(-50px, -40px);
 	pointer-events: none;
-	
+
 }
+
 @keyframes hit {
 	from {
 		transform: rotate(300deg);
 	}
+
 	to {
 		transform: rotate(220deg);
 	}
@@ -144,6 +168,7 @@ h3 {
 	background-size: contain;
 	background-size: 200px;
 }
+
 .hole {
 	height: 190px;
 	width: 220px;
@@ -153,9 +178,9 @@ h3 {
 	display: flex;
 	align-items: center;
 	text-align: center;
-	box-shadow:inset 0px -1px 12px 3px
-	
+	box-shadow: inset 0px -1px 12px 3px
 }
+
 .button-container {
 	height: 30vh;
 	display: flex;
@@ -168,14 +193,15 @@ h3 {
 
 .gamestart {
 	height: 60px;
-    width: 200px;
-    font-weight: bold;
+	width: 200px;
+	font-weight: bold;
 	border-radius: 20px;
 }
+
 .gamestart:focus {
 	outline-color: transparent;
 	background-color: blue;
-	outline-style:solid;
+	outline-style: solid;
 	box-shadow: 0 0 0 4px blue;
 	transition: 0.7s;
 	color: aliceblue;
@@ -184,80 +210,87 @@ h3 {
 .gamestart:active {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
-  }
+}
 
 
 .easybutton:focus {
-    outline-color: transparent;
+	outline-color: transparent;
 	background-color: green;
-    outline-style:solid;
-    box-shadow: 0 0 0 4px green;
-    transition: 0.7s;
+	outline-style: solid;
+	box-shadow: 0 0 0 4px green;
+	transition: 0.7s;
 	color: white;
 
 }
+
 .easybutton:active {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
-  }
+}
+
 .mediumbutton:focus {
-    outline-color: transparent;
+	outline-color: transparent;
 	background-color: orange;
-    outline-style:solid;
-    box-shadow: 0 0 0 4px orange;
-    transition: 0.7s;
+	outline-style: solid;
+	box-shadow: 0 0 0 4px orange;
+	transition: 0.7s;
 	color: white;
 
 }
+
 .mediumbutton:active {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
-  }
+}
+
 .hardbutton:focus {
-    outline-color: transparent;
+	outline-color: transparent;
 	background-color: red;
-    outline-style:solid;
-    box-shadow: 0 0 0 4px red;
-    transition: 0.7s;
+	outline-style: solid;
+	box-shadow: 0 0 0 4px red;
+	transition: 0.7s;
 	color: white;
 
 }
+
 .hardbutton:active {
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
-  }
+}
+
 .easybutton {
 	color: green;
 	font-weight: bold;
 	height: 60px;
-    width: 150px;
-    font-weight: bold;
+	width: 150px;
+	font-weight: bold;
 	border-radius: 20px;
 }
 
 .mediumbutton {
 	height: 60px;
-    width: 150px;
-    font-weight: bold;
+	width: 150px;
+	font-weight: bold;
 	border-radius: 20px;
 	color: orange;
 	font-weight: bold;
 }
+
 .hardbutton {
 	height: 60px;
-    width: 150px;
-    font-weight: bold;
+	width: 150px;
+	font-weight: bold;
 	border-radius: 20px;
 	color: red;
 	font-weight: bold;
 }
-.end-game-message {
-	
-    height: 50px;
-    width: 20vw;
-    font-size: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
+.end-game-message {
+
+	height: 50px;
+	width: 20vw;
+	font-size: 45px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
