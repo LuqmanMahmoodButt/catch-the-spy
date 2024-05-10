@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 * {
 	cursor: none;
 	
@@ -35,6 +37,9 @@ h3 {
 	justify-content: flex-end;
 	width: 44vw;
 	font-size: 45px;
+	font-family: "Pacifico", cursive;
+	font-weight: 400;
+	font-style: normal;
 }
 .end-game-message {
 	color: white;
