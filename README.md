@@ -34,8 +34,97 @@ Welcome to Catch The Spy game! This game challenges you to catch a certian amoun
 - **CSS:** Styled the game elements for better user experience.
 - **JavaScript:** Implemented game logic and interactivity.
 
+## Acknowledgments
+
+- [Spy Image](https://www.cleanpng.com/png-rowan-atkinson-png-55414/)
+
+- [Music for the game](https://www.youtube.com/watch?v=U9FzgsF2T-s&ab_channel=TheAmericanGazette)
+
 ## Game Code Details
 
+
+### JavaScript Logic
+- JavaScript code handles game logic, such as spy movement, user interactions, score tracking, and timer management.
+- Event listeners are used to detect user clicks on holes and start button clicks.
+- The game dynamically adjusts difficulty based on the selected mode (Easy, Medium, Hard).
+- The `mousemove` event listener tracks cursor movement and displays a custom cursor image.
+- Background music is played using the `audio` HTML element and JavaScript `play()` method.
+
+
+### This function decrements the gameTime variable representing the game timer. It updates the text content of the time element to display the remaining game time.
+- It evaluates the game result based on the difficulty level (easySpeed, mediumSpeed, hardSpeed) and the player's score (result).
+- Updates the endResult element to display whether the player wins or loses.
+- Clears the game timer and spy movement intervals.
+- Resets the game by setting the timer variable to null and resetting the result variable to zero.
+```js
+const countDown = () => {
+    gameTime--
+    time.textContent = `Game Timer: ${gameTime}`
+
+    if (gameTime === 0) {
+        console.log(result, easySpeed, mediumSpeed);
+        if (easySpeed === true) {
+            if (result >= 50) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            } 
+        } else if ( mediumSpeed === true) {
+            if (result >= 25) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            }
+        } else if ( hardSpeed === true) {
+            if (result >= 10) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = "LOSER!"
+            }
+        }
+        // this code resets the game
+        clearInterval(timer)
+        clearInterval(spyMovement)
+        timer = null
+        result = 0
+    }
+}
+```
+moveSpy Function:
+This function sets up an interval (spyMovement) to repeatedly call the randomHole function, which randomly selects a hole for the spy to appear.
+
+```js
+const moveSpy = () => {
+    spyMovement = setInterval(randomHole, gameSpeed)
+}
+
+const startGameButton = () => {
+    if (timer) return;
+
+    result = 0;
+    score.textContent = `Your Score: ${result}`;
+
+    gameTime = 60;
+    time.textContent = `Game Timer: ${gameTime}`;
+    timer = setInterval(countDown, 1000);
+
+    moveSpy();
+    countDown()
+    audio.play()
+}
+```
+
+- This event listener is attached to the "click" event of the "EASY" button (easy), which is used to select the easy difficulty level in the game.
+```js
+easy.addEventListener('click', () => {
+    gameSpeed = 1000
+    hardSpeed = false
+    mediumSpeed = false
+    easySpeed = true
+    console.log("working ", easySpeed, mediumSpeed);
+
+})
+```
 ### HTML Structure
 - The game layout and elements are structured using HTML, including buttons, score display, timer, and holes where spies can hide.
 ```html
@@ -93,71 +182,3 @@ Welcome to Catch The Spy game! This game challenges you to catch a certian amoun
 }
 ```
 
-### JavaScript Logic
-- JavaScript code handles game logic, such as spy movement, user interactions, score tracking, and timer management.
-- Event listeners are used to detect user clicks on holes and start button clicks.
-- The game dynamically adjusts difficulty based on the selected mode (Easy, Medium, Hard).
-- The `mousemove` event listener tracks cursor movement and displays a custom cursor image.
-- Background music is played using the `audio` HTML element and JavaScript `play()` method.
-```js
-const countDown = () => {
-    gameTime--
-    time.textContent = `Game Timer: ${gameTime}`
-
-    if (gameTime === 0) {
-        console.log(result, easySpeed, mediumSpeed);
-        if (easySpeed === true) {
-            if (result >= 50) {
-                endResult.textContent = "WINNER!"
-            } else {
-                endResult.textContent = 'LOSER!'
-            } 
-        } else if ( mediumSpeed === true) {
-            if (result >= 25) {
-                endResult.textContent = "WINNER!"
-            } else {
-                endResult.textContent = 'LOSER!'
-            }
-        } else if ( hardSpeed === true) {
-            if (result >= 10) {
-                endResult.textContent = "WINNER!"
-            } else {
-                endResult.textContent = "LOSER!"
-            }
-        }
-        // this code resets the game
-        clearInterval(timer)
-        clearInterval(spyMovement)
-        timer = null
-        result = 0
-    }
-}
-
-const moveSpy = () => {
-    spyMovement = setInterval(randomHole, gameSpeed)
-}
-
-const startGameButton = () => {
-    if (timer) return;
-
-    result = 0;
-    score.textContent = `Your Score: ${result}`;
-
-    gameTime = 60;
-    time.textContent = `Game Timer: ${gameTime}`;
-    timer = setInterval(countDown, 1000);
-
-    moveSpy();
-    countDown()
-    audio.play()
-}
-easy.addEventListener('click', () => {
-    gameSpeed = 1000
-    hardSpeed = false
-    mediumSpeed = false
-    easySpeed = true
-    console.log("working ", easySpeed, mediumSpeed);
-
-})
-```
-### refrences 
