@@ -165,7 +165,27 @@ easy.addEventListener('click', () => {
 ### CSS Styling
 - CSS styles are applied to enhance the appearance of game elements, including fonts, colors, and layouts.
 
-![Game](/assests/gametitle.png)
-
-![Game](/assests/gametime.png)
+```css
+.game-title {
+	color: greenyellow;
+	display: flex;
+	justify-content: flex-end;
+	width: 44vw;
+	font-size: 45px;
+	font-family: "Pacifico", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+.game {
+	width: 697px;
+	height: 610px;
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-around;
+}
+```
 
