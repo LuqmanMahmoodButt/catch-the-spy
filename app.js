@@ -127,7 +127,7 @@ const startGameButton = () => {
     result = 0;
     score.textContent = `Your Score: ${result}`;
 
-    gameTime = 60;
+    gameTime = 5;
     time.textContent = `Game Timer: ${gameTime}`;
     timer = setInterval(countDown, 1000);
 
