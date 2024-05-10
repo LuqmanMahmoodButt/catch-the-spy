@@ -1,6 +1,12 @@
 # Catch The Spy
 
-Welcome to Catch The Spy game! This game challenges you to catch the spy hidden among the holes before the timer runs out.
+Welcome to Catch The Spy game! This game challenges you to catch a certian amount of spies hidden among the holes before the timer runs out.
+
+## Demo
+
+[Link to the live demo](#)
+
+![Game](/assests/game-picture.png)
 
 ## How to Play
 
@@ -32,9 +38,60 @@ Welcome to Catch The Spy game! This game challenges you to catch the spy hidden 
 
 ### HTML Structure
 - The game layout and elements are structured using HTML, including buttons, score display, timer, and holes where spies can hide.
+```html
+<body>
+    <div class="end-game-message"></div>
+        <div class="button-container">
+            <button class="gamestart"> START GAME</button>
+            <button class="easybutton"> EASY</button>
+            <button class="mediumbutton"> MEDIUM </button>
+            <button class="hardbutton"> HARD </button>
+        </div>
+        <div class="game">
+        <div class="score-timer">
+            <h2 class="score">Your Score: </h2>
+            <h2 class="gametime"></h2>
+        </div>
+        <div class="hole" id="1"></div>
+        <div class="hole" id="2"></div>
+        <div class="hole" id="3"></div>
+        <div class="hole" id="4"></div>
+        <div class="hole" id="5"></div>
+        <div class="hole" id="6"></div>
+        <div class="hole" id="7"></div>
+        <div class="hole" id="8"></div>
+        <div class="hole" id="9"></div>
+        </div>
+    <div class="cursor">
+        <img src="./assests/net.png" alt="net">
+    </div>
+</body>
+
+```
 
 ### CSS Styling
 - CSS styles are applied to enhance the appearance of game elements, including fonts, colors, and layouts.
+```css
+.game-title {
+	color: greenyellow;
+	display: flex;
+	justify-content: flex-end;
+	width: 44vw;
+	font-size: 45px;
+	font-family: "Pacifico", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+.score-timer {
+	width: 800px;
+	display: flex;
+	flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: space-around;
+}
+```
 
 ### JavaScript Logic
 - JavaScript code handles game logic, such as spy movement, user interactions, score tracking, and timer management.
@@ -42,7 +99,65 @@ Welcome to Catch The Spy game! This game challenges you to catch the spy hidden 
 - The game dynamically adjusts difficulty based on the selected mode (Easy, Medium, Hard).
 - The `mousemove` event listener tracks cursor movement and displays a custom cursor image.
 - Background music is played using the `audio` HTML element and JavaScript `play()` method.
+```js
+const countDown = () => {
+    gameTime--
+    time.textContent = `Game Timer: ${gameTime}`
 
-## Demo
+    if (gameTime === 0) {
+        console.log(result, easySpeed, mediumSpeed);
+        if (easySpeed === true) {
+            if (result >= 50) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            } 
+        } else if ( mediumSpeed === true) {
+            if (result >= 25) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = 'LOSER!'
+            }
+        } else if ( hardSpeed === true) {
+            if (result >= 10) {
+                endResult.textContent = "WINNER!"
+            } else {
+                endResult.textContent = "LOSER!"
+            }
+        }
+        // this code resets the game
+        clearInterval(timer)
+        clearInterval(spyMovement)
+        timer = null
+        result = 0
+    }
+}
 
-[Link to the live demo](#)
+const moveSpy = () => {
+    spyMovement = setInterval(randomHole, gameSpeed)
+}
+
+const startGameButton = () => {
+    if (timer) return;
+
+    result = 0;
+    score.textContent = `Your Score: ${result}`;
+
+    gameTime = 60;
+    time.textContent = `Game Timer: ${gameTime}`;
+    timer = setInterval(countDown, 1000);
+
+    moveSpy();
+    countDown()
+    audio.play()
+}
+easy.addEventListener('click', () => {
+    gameSpeed = 1000
+    hardSpeed = false
+    mediumSpeed = false
+    easySpeed = true
+    console.log("working ", easySpeed, mediumSpeed);
+
+})
+```
+### refrences 
