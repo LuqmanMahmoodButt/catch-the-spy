@@ -122,7 +122,7 @@ h3 {
 }
 
 .spy {
-	background-image: url('../assests/english-spy.png');
+	background-image: url('./assests/english-spy.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-size: 200px;

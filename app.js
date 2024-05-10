@@ -89,19 +89,19 @@ const countDown = () => {
     if (gameTime === 0) {
         console.log(result, easySpeed, mediumSpeed);
         if (easySpeed === true) {
-            if (result >= 5) {
+            if (result >= 50) {
                 endResult.textContent = "WINNER!"
             } else {
                 endResult.textContent = 'LOSER!'
             } 
         } else if ( mediumSpeed === true) {
-            if (result >= 5) {
+            if (result >= 25) {
                 endResult.textContent = "WINNER!"
             } else {
                 endResult.textContent = 'LOSER!'
             }
         } else if ( hardSpeed === true) {
-            if (result >= 5) {
+            if (result >= 10) {
                 endResult.textContent = "WINNER!"
             } else {
                 endResult.textContent = "LOSER!"
@@ -127,7 +127,7 @@ const startGameButton = () => {
     result = 0;
     score.textContent = `Your Score: ${result}`;
 
-    gameTime = 20;
+    gameTime = 60;
     time.textContent = `Game Timer: ${gameTime}`;
     timer = setInterval(countDown, 1000);
 
